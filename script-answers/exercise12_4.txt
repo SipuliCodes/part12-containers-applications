@@ -1,0 +1,50 @@
+Script started on 2024-04-12 15:24:25+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+# apt-get -y install curl
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.81.0-1ubuntu1.16).
+0 upgraded, 0 newly installed, 0 to remove and 12 not upgraded.
+# curl -sL https://deb.nodesource.com/setup_20.x | bash apt install -y nodejs
+sh: 2: cur�l: not found
+/usr/bin/apt: /usr/bin/apt: cannot execute binary file
+# curl -sL https://deb.nodesource.com/setup_20.x | bash
+apt install -y nodejs2024-04-12 15:26:12 - Installing pre-requisites
+Hit:1 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ca-certificates is already the newest version (20230311ubuntu0.22.04.1).
+curl is already the newest version (7.81.0-1ubuntu1.16).
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+apt-transport-https is already the newest version (2.4.12).
+0 upgraded, 0 newly installed, 0 to remove and 12 not upgraded.
+Hit:1 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+2024-04-12 15:26:17 - Repository configured successfully. To install Node.js, run: apt-get install nodejs -y
+# apt-get install nodejs -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package nodejsapt-get
+E: Unable to locate package install
+# apt-get install -y nodejs
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nodejs is already the newest version (20.12.2-1nodesource1).
+0 upgraded, 0 newly installed, 0 to remove and 12 not upgraded.
+# node /usr/src/app/index.js
+Hello World
+# exit
+
+Script done on 2024-04-12 15:27:32+00:00 [COMMAND_EXIT_CODE="0"]
