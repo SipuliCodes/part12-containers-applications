@@ -2,6 +2,6 @@ POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
-  "text": "Buy food from shop",
-  "done": false
+  "text": "Go to the gym",
+  "done": true
 }
