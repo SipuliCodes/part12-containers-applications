@@ -1,0 +1,93 @@
+Script started on 2024-04-14 17:08:49+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUM
+NS="80" LINES="24"]
+# mongosh -u root -p example
+Current Mongosh Log ID: 661c0dd63ba6cf99b27b2da8
+Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnectio
+n=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.2
+Using MongoDB:          7.0.8
+Using Mongosh:          2.2.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to Mong
+oDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2024-04-14T16:29:47.060+00:00: /sys/kernel/mm/transparent_hugepage/enabled is
+ 'always'. We suggest setting it to 'never' in this binary version
+   2024-04-14T16:29:47.060+00:00: vm.max_map_count is too low
+------
+
+test> show dbs
+admin         100.00 KiB
+config        108.00 KiB
+local          72.00 KiB
+the_database   56.00 KiB
+test> use the_databse
+switched to db the_databse
+the_databse> show collections
+
+the_databse> use the_database
+switched to db the_database
+the_database>
+
+the_database> show collections
+todos
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId('661ad1ac6908263f927b2da9'),
+    text: 'Write code',
+    done: false
+  },
+  {
+    _id: ObjectId('661ad1ac6908263f927b2daa'),
+    text: 'Learn about containers',
+    done: false
+  }
+]
+the_database> db.todos.insertOne({ text: "Increase the number of tools in my too
+lbelt", done: false})
+{
+  acknowledged: true,
+  insertedId: ObjectId('661c0e863ba6cf99b27b2da9')
+}
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId('661ad1ac6908263f927b2da9'),
+    text: 'Write code',
+    done: false
+  },
+  {
+    _id: ObjectId('661ad1ac6908263f927b2daa'),
+    text: 'Learn about containers',
+    done: false
+  },
+  {
+    _id: ObjectId('661c0e863ba6cf99b27b2da9'),
+    text: 'Increase the number of tools in my toolbelt',
+    done: false
+  }
+]
+the_database> bye
+ReferenceError: bye is not defined
+the_database> cd ..
+Uncaught:
+SyntaxError: Unexpected token (1:4)
+
+> 1 | cd ..
+    |     ^
+  2 |
+
+the_database> kill
+ReferenceError: kill is not defined
+the_database> exit
+# bye
+sh: 2: bye: not found
+# exit
+
+Script done on 2024-04-14 17:14:23+00:00 [COMMAND_EXIT_CODE="127"]
