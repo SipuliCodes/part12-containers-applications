@@ -9,6 +9,11 @@ ENV VITE_BACKEND_URL="http://localhost:3000"
 
 RUN npm run build
 
+FROM node:20 AS test
+RUN npm ci --include=dev
+COPY . .
+RUN npm run test
+
 FROM nginx:1.25-alpine
 
 
